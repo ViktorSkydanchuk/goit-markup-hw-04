@@ -6,6 +6,7 @@
   --background-color: #2f303a;
   --second-background-color: #f5f4fa;
   --footer-link-color: rgba(255, 255, 255, 0.6);
+  --soc-icon-color: #afb1b8;
 
   --typical-margin: 50px;
   --second-typical-margin: 30px;
@@ -137,10 +138,12 @@ body {
   margin-left: auto;
   align-items: center;
 }
+
 .header-item:not(:last-child) {
   margin-right: var(--typical-margin);
 }
 .header-mail {
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -148,8 +151,15 @@ body {
   color: var(--text-color);
 
   padding: 15px 0;
+  align-items: center;
+}
+.header-mail-icon {
+  fill: currentColor;
+
+  margin-right: 10px;
 }
 .header-tel {
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -157,6 +167,13 @@ body {
   color: var(--text-color);
 
   padding: 15px 0;
+  align-items: center;
+}
+
+.header-tel-icon {
+  fill: currentColor;
+
+  margin-right: 10px;
 }
 .accent:hover,
 .accent:focus,
@@ -171,10 +188,17 @@ body {
 /*------------------------PRESENTATION------------------*/
 
 .presentation {
+  max-width: 1600px;
   background-color: var(--background-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   padding-top: 200px;
   padding-bottom: 200px;
+  margin: 0 auto;
 }
 .presentation-title {
   width: 696px;
@@ -214,11 +238,10 @@ body {
 /* ----------------------BENEFITS----------------- */
 
 .benefits {
+  max-width: 1600px;
   padding-top: var(--typical-padding);
   padding-bottom: var(--typical-padding);
-}
-
-.benefits-title {
+  margin: 0 auto;
 }
 
 .benefits-list {
@@ -231,6 +254,13 @@ body {
 
 .benefits-item:not(:last-child) {
   margin-right: var(--second-typical-margin);
+}
+.benefits-item-box {
+  height: 120px;
+  background-color: var(--second-background-color);
+  border-radius: 4px;
+  margin-bottom: var(--second-typical-margin);
+  padding: 25px 100px;
 }
 
 .benefits-item-title {
@@ -252,7 +282,10 @@ body {
 /*-------------------ABOUT--------------------------*/
 
 .about {
+  max-width: 1600px;
+
   padding-bottom: var(--typical-padding);
+  margin: 0 auto;
 }
 
 .about-title {
@@ -273,10 +306,12 @@ body {
 /*---------------------TEAM--------------------*/
 
 .team {
+  max-width: 1600px;
   background-color: var(--second-background-color);
 
   padding-top: var(--typical-padding);
   padding-bottom: var(--typical-padding);
+  margin: 0 auto;
 }
 .team-title {
   font-weight: 700;
@@ -322,14 +357,121 @@ body {
   letter-spacing: 0.03em;
   color: var(--text-color);
 }
+
+.team-soc-list {
+  display: flex;
+  padding: 16px 32px 30px 32px;
+}
+
+.team-soc-item {
+  width: 44px;
+  height: 44px;
+
+  margin-right: 10px;
+}
+
+.team-soc-item:last-child {
+  margin-right: 0;
+}
+
+.team-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--soc-icon-color);
+}
+
+.team-soc-icon {
+  fill: currentColor;
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+  background-color: var(--accent-color);
+  color: var(--main-title-color);
+}
+
+/* -------------------------------CLIENTS--------------------- */
+
+.clients {
+  max-width: 1600px;
+
+  padding-top: var(--typical-padding);
+  padding-bottom: var(--typical-padding);
+  margin: 0 auto;
+}
+
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+
+  margin-bottom: var(--typical-margin);
+}
+.clients-list {
+  display: flex;
+}
+
+.clients-item {
+  width: 170px;
+  height: 92px;
+
+  padding: 16px 32px;
+  margin-right: var(--second-typical-margin);
+}
+
+.clients-item:last-child {
+  margin-right: 0;
+}
+
+.clients-link {
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: currentColor;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--soc-icon-color);
+}
+
+.team-soc-icon {
+  fill: currentColor;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--accent-color);
+}
+
 /*-------------------------FOOTER-------------------*/
 
 .footer {
+  max-width: 1600px;
   background-color: var(--background-color);
 
+  margin: 0 auto;
+}
+
+.footer .container {
+  display: flex;
+  /* align-items: center; */
+}
+
+.address {
   padding-top: 60px;
   padding-bottom: 60px;
+  padding-right: 70px;
 }
+
 .footer-link {
   display: inline-block;
   font-family: 'Raleway', sans-serif;
@@ -349,10 +491,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--main-title-color);
 }
-.footer-address {
-}
-.footer-address-list {
-}
+
 .footer-address-item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -382,15 +521,53 @@ body {
 .footer-tel:focus {
   color: var(--accent-color);
 }
-/*--------------------PORTFOLIO--------------------*/
-.portfolio-main {
+
+.social {
+  padding-top: 72px;
+  padding-bottom: 100px;
 }
 
+.social-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-title-color);
+
+  margin-bottom: 20px;
+}
+.social-list {
+  display: flex;
+}
+
+.social-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 10px;
+}
+
+.social-item:last-child {
+  margin-right: 0;
+}
+
+.social-item:nth-child(2) {
+  background-color: var(--accent-color);
+}
+
+/*--------------------PORTFOLIO--------------------*/
+
 .portfolio {
+  max-width: 1600px;
   padding-top: var(--typical-padding);
   padding-bottom: var(--typical-padding);
-}
-.portfolio-title {
+  margin: 0 auto;
 }
 
 .portfolio-list {
@@ -421,7 +598,9 @@ body {
 .portfolio-btn:focus {
   color: var(--main-title-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .portfolio-second-list {
   display: flex;
   flex-wrap: wrap;
@@ -434,6 +613,15 @@ body {
 
 .second-list-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: var(--second-typical-margin);
+}
+
+.second-list-link{
+display: block;
+}
+
+.second-list-link:hover,
+.second-list-link:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .second-list-box {
