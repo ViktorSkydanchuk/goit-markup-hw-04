@@ -190,9 +190,9 @@ body {
 .header-tel:focus {
   color: var(--accent-color);
 }
-/*------------------------PRESENTATION------------------*/
+/*------------------------HERO------------------*/
 
-.presentation {
+.hero {
   max-width: 1600px;
   height: 600px;
   background-color: var(--background-color);
@@ -206,7 +206,7 @@ body {
   padding-bottom: 200px;
   margin: 0 auto;
 }
-.presentation-title {
+.hero-title {
   width: 696px;
   font-weight: 900;
   font-size: 44px;
@@ -220,7 +220,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.presentation-btn {
+.hero-btn {
   min-width: 200px;
   font-family: inherit;
   font-weight: 700;
