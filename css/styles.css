@@ -431,6 +431,10 @@ body {
   color: var(--accent-color);
 }
 
+.clients-soc-icon {
+  fill: currentColor;
+}
+
 /*-------------------------FOOTER-------------------*/
 
 .footer {
